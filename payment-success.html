@@ -3,20 +3,49 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Payment Success</title>
+  <title>Payment Successful - Menstribe Shop</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9fff9;
+      color: #2e7d32;
+      text-align: center;
+      padding-top: 100px;
+    }
+    h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 16px;
+      color: #555;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      background-color: #2e7d32;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+  </style>
   <script>
-    window.onload = function() {
-      // Try to open the Menstribe app using your custom deep link
-      window.location.href = "menstribeshop://payment-success";
+    // Automatically open the app after 1 second
+    setTimeout(() => {
+      window.location.href = "menstribeshopmobileordering://payment-success";
+    }, 1000);
 
-      // Fallback message if app isn't installed or deep link fails
-      setTimeout(() => {
-        document.body.innerHTML = "<h2>✅ Payment Successful! You may now close this page and return to Menstribe Shop.</h2>";
-      }, 2000);
-    };
+    // Fallback: if app not installed, redirect to a web fallback page
+    setTimeout(() => {
+      window.location.href = "https://miziel23.github.io/menstribe-payment-redirectsv/open-app-fallback.html";
+    }, 4000);
   </script>
 </head>
 <body>
-  <h2>Redirecting to Menstribe Shop...</h2>
+  <h1>✅ Payment Successful!</h1>
+  <p>Thank you for your order. Redirecting to the Menstribe app...</p>
+  <a class="btn" href="menstribeshopmobileordering://payment-success">Open Menstribe App</a>
 </body>
 </html>
