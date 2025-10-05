@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Payment Success</title>
+  <script>
+    window.onload = function() {
+      // Try to open the Menstribe app using your custom deep link
+      window.location.href = "menstribeshop://payment-success";
+
+      // Fallback message if app isn't installed or deep link fails
+      setTimeout(() => {
+        document.body.innerHTML = "<h2>✅ Payment Successful! You may now close this page and return to Menstribe Shop.</h2>";
+      }, 2000);
+    };
+  </script>
+</head>
+<body>
+  <h2>Redirecting to Menstribe Shop...</h2>
+</body>
+</html>
