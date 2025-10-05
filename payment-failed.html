@@ -8,7 +8,7 @@
     body {
       font-family: 'Poppins', sans-serif;
       background-color: #fff5f5;
-      color: #d32f2f;
+      color: #c53030;
       text-align: center;
       padding: 50px 20px;
     }
@@ -35,7 +35,7 @@
     }
     .btn {
       display: inline-block;
-      background-color: #d32f2f;
+      background-color: #e53e3e;
       color: white;
       padding: 12px 24px;
       border-radius: 30px;
@@ -44,21 +44,21 @@
       transition: background 0.3s ease;
     }
     .btn:hover {
-      background-color: #b71c1c;
+      background-color: #c53030;
     }
   </style>
 </head>
 <body>
   <div class="container">
     <img src="https://cdn-icons-png.flaticon.com/512/463/463612.png" alt="Failed Icon" />
-    <h1>Payment Failed</h1>
-    <p>Unfortunately, your payment could not be processed.<br>Please try again.</p>
-    <a class="btn" href="menstribeshopmobileordering://Orders">Return to App</a>
+    <h1>Payment Failed!</h1>
+    <p>Unfortunately, your payment was not completed. Please try again.</p>
+    <a class="btn" href="menstribeshopmobileordering://payment-failed">Return to App</a>
   </div>
 
   <script>
     setTimeout(() => {
-      window.location.href = "menstribeshopmobileordering://Orders";
+      window.location.href = "menstribeshopmobileordering://payment-failed";
     }, 3000);
   </script>
 </body>
