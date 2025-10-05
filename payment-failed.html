@@ -52,14 +52,13 @@
   <div class="container">
     <img src="https://cdn-icons-png.flaticon.com/512/463/463612.png" alt="Failed Icon" />
     <h1>Payment Failed</h1>
-    <p>Unfortunately, your payment could not be processed.<br>Please try again or contact support.</p>
-    <a class="btn" href="menstribeshopmobileordering://payment-failed">Return to App</a>
+    <p>Unfortunately, your payment could not be processed.<br>Please try again.</p>
+    <a class="btn" href="menstribeshopmobileordering://Orders">Return to App</a>
   </div>
 
   <script>
-    // Auto redirect after 3 seconds
     setTimeout(() => {
-      window.location.href = "menstribeshopmobileordering://payment-failed";
+      window.location.href = "menstribeshopmobileordering://order";
     }, 3000);
   </script>
 </body>

@@ -6,11 +6,24 @@
   <title>Payment Successful - Menstribe Shop</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f9fff9;
-      color: #2e7d32;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f0fff4;
+      color: #2f855a;
       text-align: center;
-      padding-top: 100px;
+      padding: 50px 20px;
+    }
+    .container {
+      max-width: 400px;
+      margin: 80px auto;
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 40px 20px;
+    }
+    img {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 20px;
     }
     h1 {
       font-size: 24px;
@@ -18,34 +31,35 @@
     }
     p {
       font-size: 16px;
-      color: #555;
+      margin-bottom: 30px;
     }
     .btn {
       display: inline-block;
-      margin-top: 20px;
-      background-color: #2e7d32;
+      background-color: #38a169;
       color: white;
-      padding: 10px 20px;
+      padding: 12px 24px;
+      border-radius: 30px;
       text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+    .btn:hover {
+      background-color: #2f855a;
     }
   </style>
-  <script>
-    // Automatically open the app after 1 second
-    setTimeout(() => {
-      window.location.href = "menstribeshopmobileordering://payment-success";
-    }, 1000);
-
-    // Fallback: if app not installed, redirect to a web fallback page
-    setTimeout(() => {
-      window.location.href = "https://miziel23.github.io/menstribe-payment-redirectsv/open-app-fallback.html";
-    }, 4000);
-  </script>
 </head>
 <body>
-  <h1>✅ Payment Successful!</h1>
-  <p>Thank you for your order. Redirecting to the Menstribe app...</p>
-  <a class="btn" href="menstribeshopmobileordering://payment-success">Open Menstribe App</a>
+  <div class="container">
+    <img src="https://cdn-icons-png.flaticon.com/512/845/845646.png" alt="Success Icon" />
+    <h1>Payment Successful!</h1>
+    <p>Thank you for your purchase. Your order has been placed successfully.</p>
+    <a class="btn" href="menstribeshopmobileordering://Orders">Return to App</a>
+  </div>
+
+  <script>
+    setTimeout(() => {
+      window.location.href = "menstribeshopmobileordering://order";
+    }, 3000);
+  </script>
 </body>
 </html>
